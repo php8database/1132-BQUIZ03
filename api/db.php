@@ -3,7 +3,7 @@
 session_start();
 
 class DB{
-    protected $dsn="mysql:host=localhost;charset=utf8;dbname=db07_03";
+    protected $dsn="mysql:host=localhost;charset=utf8;dbname=db19";
     protected $pdo;
     protected $table;
 
@@ -147,7 +147,7 @@ class DB{
 }
 
 function q($sql){
-    $pdo=new PDO("mysql:host=localhost;charset=utf8;dbname=db07_03",'root','');
+    $pdo=new PDO("mysql:host=localhost;charset=utf8;dbname=db19",'root','');
     return $pdo->query($sql)->fetchAll();
 }
 
@@ -163,3 +163,4 @@ function to($url){
 
 
 $Poster=new DB('posters');   
+$Movie=new DB('movies');
