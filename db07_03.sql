@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2025-01-14 04:23:54
+-- 產生時間： 2025-01-14 04:39:50
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -63,10 +63,10 @@ INSERT INTO `movies` (`id`, `name`, `level`, `length`, `ondate`, `publish`, `dir
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `oders`
+-- 資料表結構 `orders`
 --
 
-CREATE TABLE `oders` (
+CREATE TABLE `orders` (
   `id` int(10) UNSIGNED NOT NULL COMMENT '流水號',
   `no` text NOT NULL COMMENT '訂單編號',
   `movie` text NOT NULL COMMENT '電影名稱',
@@ -117,9 +117,9 @@ ALTER TABLE `movies`
   ADD PRIMARY KEY (`id`);
 
 --
--- 資料表索引 `oders`
+-- 資料表索引 `orders`
 --
-ALTER TABLE `oders`
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -139,9 +139,9 @@ ALTER TABLE `movies`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- 使用資料表自動遞增(AUTO_INCREMENT) `oders`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `orders`
 --
-ALTER TABLE `oders`
+ALTER TABLE `orders`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '流水號';
 
 --

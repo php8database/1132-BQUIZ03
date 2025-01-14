@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2025-01-14 04:23:11
+-- 產生時間： 2025-01-14 04:38:57
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `oders`
+-- 資料表結構 `orders`
 --
 
-CREATE TABLE `oders` (
+CREATE TABLE `orders` (
   `id` int(10) UNSIGNED NOT NULL COMMENT '流水號',
   `no` text NOT NULL COMMENT '訂單編號',
   `movie` text NOT NULL COMMENT '電影名稱',
@@ -42,9 +42,9 @@ CREATE TABLE `oders` (
 --
 
 --
--- 資料表索引 `oders`
+-- 資料表索引 `orders`
 --
-ALTER TABLE `oders`
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -52,9 +52,9 @@ ALTER TABLE `oders`
 --
 
 --
--- 使用資料表自動遞增(AUTO_INCREMENT) `oders`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `orders`
 --
-ALTER TABLE `oders`
+ALTER TABLE `orders`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '流水號';
 COMMIT;
 
