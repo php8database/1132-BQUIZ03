@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2025-01-14 04:39:50
+-- 產生時間： 2025-02-27 02:47:16
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -76,6 +76,13 @@ CREATE TABLE `orders` (
   `seats` text NOT NULL COMMENT '座位'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- 傾印資料表的資料 `orders`
+--
+
+INSERT INTO `orders` (`id`, `no`, `movie`, `date`, `session`, `qt`, `seats`) VALUES
+(1, '202501140001', '03B01', '2025-01-14', '18:00~20:00', 4, 'a:4:{i:0;s:1:\"0\";i:1;s:1:\"6\";i:2;s:2:\"12\";i:3;s:2:\"18\";}');
+
 -- --------------------------------------------------------
 
 --
@@ -142,7 +149,7 @@ ALTER TABLE `movies`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '流水號';
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '流水號', AUTO_INCREMENT=2;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `posters`
