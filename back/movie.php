@@ -24,14 +24,25 @@ function getMovies() {
         $(".show").on("click", function() {
             let id = $(this).data('id');
             $.post("./api/show.php", {id}, () => {
-                getMovies();
+                //getMovies();
+                switch($(this).text()){
+                    case "顯示":
+                        $(this).text("隱藏");
+                        break;
+                    case "隱藏":
+                        $(this).text("顯示");
+                        break;
+                }
             })
         })
 
         $(".del").on("click", function() {
             let id = $(this).data('id');
+            $movie=$(this).parents(".movie-item");
+            //console.log($($movie).html());
             $.post("./api/del.php", { table: 'Movie', id}, () => {
-                getMovies();
+                //getMovies();
+                $($movie).remove();
             })
         })
     });
